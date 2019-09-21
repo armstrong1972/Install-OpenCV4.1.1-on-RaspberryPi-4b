@@ -81,7 +81,7 @@ $ sudo reboot
 ==============================================================
 安装 基础库
 ==============================================================
-$ sudo apt-get install build-essential cmake unzip pkg-config
+$ sudo apt-get -y install build-essential cmake unzip pkg-config
 $ sudo apt-get -y install libjpeg-dev libpng-dev libtiff-dev
 $ sudo apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 $ sudo apt-get -y install libxvidcore-dev libx264-dev
@@ -100,7 +100,7 @@ $ sudo apt-get -y install python3-dev
     
 $ unzip opencv-4.1.1.zip
 $ unzip opencv_contrib-4.1.1.zip
-$ cd opencv-4.1.1
+
 目录改名，方便抄前人文档的cmake参数
 $ mv opencv-4.1.1 opencv
 $ mv opencv_contrib-4.1.1 opencv_contrib
