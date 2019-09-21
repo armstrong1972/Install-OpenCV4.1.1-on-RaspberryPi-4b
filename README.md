@@ -3,9 +3,9 @@ How to install OpenCV4.1.1 on RaspberryPi 4b
 
 Provide Chinese version first, English later
 
-==============================================================
+
 安装系统
-==============================================================
+==========
 
 1: 下载 SD Card Formatter （https://www.sdcard.org/downloads/formatter/index.html）
     用 SD Card Formatter 格式化 cf 卡
@@ -15,14 +15,14 @@ Provide Chinese version first, English later
 
 3：cf卡插入树莓派，开机启动。
 
-==============================================================
+
 打开 摄像头、SSH、VNC 等
-==============================================================
+==========================
 主菜单->Preferences->Raspberry Pi Configuration
 在Interface选项卡中进行选择
 
 
-==============================================================
+
 换源 (如果安装时选了 地区：中国，语言：中文，自动为清华源)
 ==============================================================
 $ sudo nano /etc/apt/sources.list
@@ -40,9 +40,9 @@ deb-src http://mirrors.aliyun.com/raspbian/raspbian/ stretch main contrib non-fr
 $ sudo apt-get update             #更新软件版本目录清单
 $ sudo apt-get upgrade            #更新软件
 
-==============================================================
+
 安装 摄像头
-==============================================================
+==============
 USB先不插入摄像头
 $ lsusb
 插入摄像头后再运行一遍，如果有多出的设备，表示已被系统接受。如，多出：
@@ -74,18 +74,18 @@ $ sudo motion
 $ service motion stop
 
 
-==============================================================
+
 在树莓派设置中把根目录扩大到整个SD卡 (Pi4B已不需要)
-==============================================================
+====================================================
 安装OpenCV、Dlib、Darknet等需要很大空间，不扩大会安装失败
 $ sudo raspi-config
 选7 Adv Options，再选A1。退出后重启
 $ sudo reboot
 
 
-==============================================================
+
 安装 基础库
-==============================================================
+===============
 $ sudo apt-get install build-essential cmake unzip pkg-config
 $ sudo apt-get -y install libjpeg-dev libpng-dev libtiff-dev
 $ sudo apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
@@ -96,9 +96,8 @@ $ sudo apt-get -y install libatlas-base-dev gfortran
 $ sudo apt-get -y install python3-dev
 
 
-==============================================================
 安装 OpenCV
-==============================================================
+==============
 从 https://github.com/opencv 下载：
     opencv-4.1.1.zip
     opencv_contrib-4.1.1.zip
